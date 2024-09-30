@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launch Your Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      .full-webpage {
+        width: auto;
+        height: 100%;
+        background-image: radial-gradient(#6f00dd99, #1b0546);
+        padding-bottom: 50px;
+      }
+      .navbar-section {
+        width: 1000px;
+        height: 60px;
+        background-color: #211143;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-bottom: 100px;
+        margin-left: 18%;
+        padding-left: 20px;
+        border-radius: 30px;
+      }
+
+      .navbar-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar-option img {
+        width: 40px;
+        height: 30px;
+      }
+
+      .navbar-category ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 100px;
+        list-style: none;
+      }
+
+      .navbar-category ul li {
+        padding-right: 40px;
+        padding-top: 10px;
+      }
+
+      .getstarted-btn button {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 50px;
+        border: none;
+      }
+      .intro-notes {
+        text-align: center;
+        color: white;
+      }
+
+      .intro-notes h1 {
+        font-size: 65px;
+        font-weight: 800;
+      }
+
+      .web-keywords {
+        background: linear-gradient(to right, #c60590, #7b08b2);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      .intro-notes p {
+        margin-top: 5px;
+      }
+
+      .button-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+
+      .started button {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 50px;
+        border: none;
+        background-image: linear-gradient(180deg, #3e36c8 50%, white);
+      }
+      .viewdocs button {
+        width: 120px;
+        height: 40px;
+        background-color: transparent;
+        margin-left: 20px;
+        border: none;
+      }
+
+      .second-section {
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      .second-section h2 {
+        color: white;
+      }
+
+      .second-sec-img {
+        width: 100vh;
+        height: 100px;
+        background-color: #111325;
+        margin-top: 50px;
+        position: relative;
+        left: 20%;
+        border-radius: 25px;
+        padding-top: 15px;
+      }
+      .second-sec-img img {
+        text-align: center;
+        /* margin-left: 10px; */
+      }
+
+      .third-section {
+        width: auto;
+        height: 200px;
+        text-align: center;
+        margin-top: 150px;
+        color: white;
+      }
+      .third-section h2 {
+        /* padding-top: 50px; */
+      }
+
+      .gaming-color {
+        color: #4046cd;
+      }
+
+      .fourth-section {
+        width: auto;
+        height: auto;
+
+        margin-top: 50px;
+      }
+
+      .headline {
+        text-align: center;
+        color: white;
+      }
+
+      .everyone {
+        color: #425ad2;
+      }
+
+      .fourth-section-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        flex-wrap: wrap;
+      }
+      .img {
+        padding-left: 70px;
+      }
+
+      .img img {
+        width: 150px;
+      }
+
+      .fifth-section {
+        width: auto;
+        height: auto;
+        margin-top: 80px;
+      }
+
+      .fifth-sec-headline {
+        text-align: center;
+        color: white;
+      }
+      .fifth-sec-headline p {
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+      }
+
+      .lync-char {
+        background: linear-gradient(to right, #c60590, #7b08b2);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+
+      .web-note {
+        width: auto;
+        height: auto;
+        margin-top: 50px;
+        border: 1px solid grey;
+        color: white;
+        border-radius: 20px;
+      }
+
+      .information-web {
+        padding-top: 20px;
+        padding-left: 50px;
+      }
+
+      .information-web p {
+        padding-top: 7px;
+      }
+      .web3 {
+        color: #42046b;
+      }
+      .seventh-section-img-borad {
+        width: auto;
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        width: 280px;
+        height: 350px;
+
+        background-image: linear-gradient(to bottom, transparent, #06061e);
+        border-radius: 10px;
+        margin-left: 30px;
+      }
+
+      .box img {
+        width: 250px;
+        margin-left: 15px;
+        padding-top: 20px;
+        border-radius: 10px;
+      }
+
+      .box h5 {
+        color: white;
+        padding-left: 15px;
+        padding-top: 20px;
+      }
+
+      .box p {
+        padding-left: 15px;
+        color: grey;
+      }
+
+      .product-suit {
+        text-align: center;
+        margin-top: 50px;
+        color: white;
+      }
+      .suite {
+        color: #4149ce;
+      }
+
+      .eight-section {
+        width: auto;
+        height: auto;
+        margin-top: 50px;
+      }
+
+      .eight-sec-tag {
+        padding-top: 50px;
+        color: white;
+        text-align: center;
+      }
+
+      .favorite-chain {
+        color: #4149ce;
+      }
+
+      .eight-section-image {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        text-align: center;
+      }
+      .img-container {
+        width: 200px;
+        height: 100px;
+      }
+      .img-container img {
+        width: 150px;
+        /* height: 0px; */
+        padding-top: 5px;
+        padding-left: 50px;
+      }
+
+      .ninth-section {
+        width: auto;
+        height: auto;
+      }
+
+      .blog-title {
+        text-align: center;
+        margin-top: 50px;
+        color: white;
+      }
+
+      .blog {
+        color: #4149ce;
+      }
+
+      .blog-title p {
+        padding-top: 10px;
+      }
+
+      .blog-card-section {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .blog-card {
+        width: 300px;
+        height: 200px;
+        height: auto;
+        background-color: #1e153c;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        border-radius: 20px;
+      }
+
+      .blog-card img {
+        width: 300px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .blog-card h5 {
+        color: white;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      .blog-card p {
+        color: rgb(129, 129, 129);
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+
+      .readmore {
+        width: 100px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 10px;
+      }
+      .right-arrow {
+        width: 40px;
+        background-color: white;
+        height: 40px;
+        text-align: center;
+        padding-top: 8px;
+        border-radius: 50%;
+        margin-left: 10px;
+        background-color: #111325;
+        color: white;
+        border: 1px solid grey;
+      }
+
+      .ten-section{
+        width: auto;
+        height: auto;
+        /* padding-bottom: 50px; */
+
+      }
+
+      .ten-section h1{
+        margin-top: 50px;
+        color: white;
+        text-align: center;
+      }
+
+      .reviews{
+        color: #3e36c8;
+      }
+
+      .review-card-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        flex-wrap: wrap;
+      }
+
+      .review-card{
+        width:300px;
+        height: 300px;
+        background-color:#05061D;
+        margin-left: 20px;
+        border-radius: 20px;
+      }
+
+      .review-card p{
+        padding-top: 10px;
+        padding-left: 10px;
+        color: white;
+      }
+
+      .userinfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #111325;
+      }
+
+      .image{
+        width:50px;
+        height: 45px;
+        border-radius: 50%;
+        margin-top:10px;
+        background-color: white;
+      }
+
+      .username{
+        margin-left: 10px;
+      }
+
+      .ele-section{
+        width: auto;
+        height: auto;
+        text-align: center;
+        margin-top: 150px;
+      }
+
+      .ele-section img{
+        width:800px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="full-webpage">
+      <br />
+      <br />
+      <br />
+      <div class="navbar-section container">
+        <div class="navbar-option">
+          <img src="./image/logo.png" alt="logo" />
+          <div class="navbar-category">
+            <ul>
+              <li>Home</li>
+              <li>Documentation</li>
+              <li>Blogs</li>
+              <li>LYNC Portal</li>
+              <li>Request a Demo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="getstarted-btn">
+          <button>Get started <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="main-section container">
+        <div class="intro-notes">
+          <h1>
+            Lunch Your Game <br />on
+            <snap class="web-keywords">Web 3.0</snap> in Minutes
+          </h1>
+          <p>
+            We help game developer to launch thier game on Web 3.0, by keeping
+            <br />
+            blockchain complexities aside with WebWorld SDKs!
+          </p>
+        </div>
+        <div class="button-section">
+          <div class="started">
+            <button>Get Started <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="viewdocs">
+            <button>View Docs <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="second-section container">
+        <h2>Backed by</h2>
+
+        <div class="second-sec-img">
+          <img src="./image/second-sec-1-img.png" alt="second-sec-1-img" />
+          <img src="./image/second-sec-2-img.png" alt="second-sec-2-img" />
+          <img src="./image/second-sec-3-img.png" alt="second-sec-3-img" />
+        </div>
+      </div>
+
+      <div class="third-section container">
+        <!-- <hr> -->
+        <h2 class="">
+          LYNC provides a scalable infrastructure for launching web3
+          <br />
+          games, without hampering the
+          <snap class="gaming-color">gaming experience.</snap> <br />
+          So that you can deliver the next big hit!
+        </h2>
+      </div>
+
+      <div class="fourth-section container">
+        <div class="headline">
+          <h1>
+            Making blocker gaming <br />
+            accessible to <snap class="everyone">Everyone!</snap>
+          </h1>
+        </div>
+        <div class="fourth-section-img">
+          <div class="img">
+            <img src="./image/fourth-sec-1-img.png" alt="fouth-section-1-img" />
+          </div>
+          <div class="img">
+            <img
+              src="./image/fourth-sec-2-img.png"
+              alt="fouth-section-2W-img"
+            />
+          </div>
+          <div class="img">
+            <img src="./image/fourth-sec-3-img.png" alt="fouth-section-3-img" />
+          </div>
+          <div class="img">
+            <img src="./image/fourth-sec-4-img.png" alt="fouth-section-4-img" />
+          </div>
+          <div class="img">
+            <img src="./image/fourth-sec-5-img.png" alt="fouth-section-5-img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="fifth-section container">
+        <div class="fifth-sec-headline">
+          <h1>
+            Power Up Your Web3 Game <br />
+            Development, With <span class="lync-char">LYNC SDKs</span>
+          </h1>
+          <p>
+            LYNC SDKs can be easily integrated into game engines like unity 3S
+            <br />
+            and unreal Engine in a few Clicks.
+          </p>
+        </div>
+        <div class="web-note">
+          <div class="information-web">
+            <h5>
+              Don't worry about the <span class="web3">Web3</span> Complexities
+            </h5>
+            <p>
+              <i class="fa-solid fa-star" style="color: #4047cd"></i> Save 9-12
+              months of development time
+            </p>
+            <p>
+              <i class="fa-solid fa-star" style="color: #4047cd"></i> Focus
+              completely on game Dev and Mechanics
+            </p>
+            <p>
+              <i class="fa-solid fa-star" style="color: #4047cd"></i> Save Up to
+              $500K+ on Salaries & Smart Contract Auditing
+            </p>
+            <p>
+              <i class="fa-solid fa-star" style="color: #4047cd"></i> Go
+              Cross-Chain in a few Clicks
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="seventh-section container">
+        <h1 class="product-suit">Products <span class="suite">Suite</span></h1>
+        <div class="seventh-section-img-borad">
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./image/seventh-sec-1-img.png" alt="seventh-sec-1-img" />
+            <h5>LYNC Wallet SDK</h5>
+            <p>
+              Empowering developer to integrate <br />
+              account abstraction in thier game, <br />
+              dapp, metaverse and move in minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="eight-section container">
+        <div class="eight-sec-tag">
+          <h1>
+            With LYNC, build on your <br />
+            <span class="favorite-chain"> favorite Chain.</span>
+          </h1>
+        </div>
+        <div class="eight-section-image">
+          <div class="img-container">
+            <img src="./image/eight-sec-1-img.png" alt="eight-sec-1-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-2-img.png" alt="eight-sec-2-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-3-img.png" alt="eight-sec-3-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-4-img.png" alt="eight-sec-4-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-5-img.png" alt="eight-sec-5-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-7-img.png" alt="eight-sec-7-img" />
+          </div>
+          <div class="img-container">
+            <img src="./image/eight-sec-8-img.png" alt="eight-sec-8-img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ninth-section container">
+        <div class="blog-title">
+          <h1>From Our <span class="blog">Blog</span></h1>
+          <p>
+            Level Up Your Web3 gaming Experience: Explor Our <br />
+            Blog for Insignts, tips, and Innovation in Gaming SDKs!
+          </p>
+        </div>
+        <div class="blog-card-section">
+          <div class="right-arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="blog-card">
+            <img src="./image/ninth-img.png" alt="ninth-img" />
+            <h5>
+              LYNC teamed up with Astar <br />
+              Network to effortlessly bring the <br />
+              next billion gammers into webs3
+            </h5>
+            <p>
+              LYNC joins forces with Astar Network to <br />allow game
+              developers and studies to <br />
+              launch games in just a few minutes <br />
+              using LYNC's SDK and infrastructure
+            </p>
+            <button class="readmore">Read more</button>
+          </div>
+          <div class="blog-card">
+            <img src="./image/ninth-img.png" alt="ninth-img" />
+            <h5>
+              LYNC teamed up with Astar <br />
+              Network to effortlessly bring the <br />
+              next billion gammers into webs3
+            </h5>
+            <p>
+              LYNC joins forces with Astar Network to <br />allow game
+              developers and studies to <br />
+              launch games in just a few minutes <br />
+              using LYNC's SDK and infrastructure
+            </p>
+            <button class="readmore">Read more</button>
+          </div>
+          <div class="blog-card">
+            <img src="./image/ninth-img.png" alt="ninth-img" />
+            <h5>
+              LYNC teamed up with Astar <br />
+              Network to effortlessly bring the <br />
+              next billion gammers into webs3
+            </h5>
+            <p>
+              LYNC joins forces with Astar Network to <br />allow game
+              developers and studies to <br />
+              launch games in just a few minutes <br />
+              using LYNC's SDK and infrastructure
+            </p>
+            <button class="readmore">Read more</button>
+          </div>
+          <div class="right-arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="ten-section">
+        <h1>Valuable <span class="reviews">reviews</span></h1>
+        <div class="review-card-section">
+        <div class="review-card">
+          <div class="throught-user">
+            <p>
+            Absolutely blown away by
+            <br />
+            the capabilities of this company's Web3
+            <br />
+            gaming SDK! Integrating it into my
+            <br />
+            project was seamless, and the
+            <br />
+            innovative tools provided took my
+            <br />
+            game to the next level. The support
+            <br />
+            team was incredibly responsive and
+            <br />
+            helpful throughout the process. <br />Highly recommended!
+            </p>
+          </div>
+          <div class="userinfo">
+            <div class="image">
+
+            </div>
+            <div class="username">
+                <h6>ALEX GEORGE</h6>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="throught-user">
+            <p>
+            Absolutely blown away by
+            <br />
+            the capabilities of this company's Web3
+            <br />
+            gaming SDK! Integrating it into my
+            <br />
+            project was seamless, and the
+            <br />
+            innovative tools provided took my
+            <br />
+            game to the next level. The support
+            <br />
+            team was incredibly responsive and
+            <br />
+            helpful throughout the process. <br />Highly recommended!
+            </p>
+          </div>
+          <div class="userinfo">
+            <div class="image">
+
+            </div>
+            <div class="username">
+                <h6>ALEX GEORGE</h6>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="throught-user">
+            <p>
+            Absolutely blown away by
+            <br />
+            the capabilities of this company's Web3
+            <br />
+            gaming SDK! Integrating it into my
+            <br />
+            project was seamless, and the
+            <br />
+            innovative tools provided took my
+            <br />
+            game to the next level. The support
+            <br />
+            team was incredibly responsive and
+            <br />
+            helpful throughout the process. <br />Highly recommended!
+            </p>
+          </div>
+          <div class="userinfo">
+            <div class="image">
+
+            </div>
+            <div class="username">
+                <h6>ALEX GEORGE</h6>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="ele-section">
+        <img src="./image/11_img.png">
+      </div>
+    </div>
+  </body>
+</html>
